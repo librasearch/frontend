@@ -4,11 +4,14 @@ import style from './style';
 
 const Header = () => (
 	<header class={style.header}>
-		<h1>Preact App</h1>
+		<h1>Librasearch</h1>
 		<nav>
 			<Link activeClassName={style.active} href="/">Home</Link>
-			<Link activeClassName={style.active} href="/profile">Me</Link>
-			<Link activeClassName={style.active} href="/profile/john">John</Link>
+			<Link activeClassName={style.active} href="/transactions">Transactions</Link>
+			<Link activeClassName={style.active} href="/statistics">Statistics</Link>
+			<Link activeClassName={style.active} href="/richlist">Rich List</Link>
+			<Link activeClassName={style.active} href="/faucet">Faucet</Link>
+			<Link activeClassName={style.active} href="/developer">Developer</Link>
 		</nav>
 	</header>
 );
