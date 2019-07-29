@@ -2,10 +2,10 @@ import { h } from 'preact';
 import { Link } from 'preact-router/match';
 import style from './style';
 
-const Header = () => (
+const pageHeader = () => (
 	<header class={style.header}>
 		<div>
-			<Link href="/"><img src="../../assets/librasearch.png" alt="Librasearch logo" /></Link>
+			<p>Something</p>
 		</div>
 		<div>
 			<nav>
@@ -19,4 +19,4 @@ const Header = () => (
 	</header>
 );
 
-export default Header;
+export default pageHeader;

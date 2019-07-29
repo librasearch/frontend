@@ -7,7 +7,6 @@ import Header from './header';
 import Home from '../routes/home';
 import Transactions from '../routes/transactions';
 import Statistics from '../routes/statistics';
-import Richlist from '../routes/richlist';
 import Faucet from '../routes/faucet';
 import Developer from '../routes/developer';
 
@@ -29,7 +28,6 @@ export default class App extends Component {
 					<Home path="/" />
 					<Transactions path="/transactions" />
 					<Statistics path="/statistics" />
-					<Richlist path="/richlist" />
 					<Faucet path="/faucet" />
 					<Developer path="/developer" />
 				</Router>

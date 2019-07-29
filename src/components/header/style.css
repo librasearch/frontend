@@ -1,0 +1,68 @@
+.header {
+	height: 70px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	background-color: #2e2f3b;
+	padding: 0px 20px 0px 20px;
+}
+
+.header > div:first-child {
+	height: 100%;
+	width: 200px;
+	float: left;
+}
+
+.header > div:first-child > a > img {
+	height: 37px;
+	margin-top: 16.5px;
+}
+
+.header > div:first-child > a > img:hover {
+	opacity: 0.8;
+}
+
+.header > div:last-child {
+	height: 100%;
+	width: calc(100% - 200px);
+	float: left;
+}
+
+.header > div:last-child > nav {
+	float: right;
+	padding-top: 27px;
+}
+
+.header > div:last-child > nav > a {
+	color: #565761;
+	font-size: 16px;
+	font-weight: 700;
+	text-decoration: none;
+	margin: 0px 10px 0px 10px;
+	transition: 0.15s ease-in-out;
+}
+
+.header > div:last-child > nav > a:hover {
+	color: #fefefe;
+}
+
+.header > div:last-child > nav > a:last-child {
+	background-color: #3750ff;
+	color: #fefefe !important;
+	border-radius: 5px;
+	padding: 10px 15px 10px 15px;
+	transition: 0.15s ease-in-out;
+}
+
+.header > div:last-child > nav > a:last-child:hover {
+	background-color: #4d61ff;
+}
+
+.active {
+	color: #fefefe !important;
+}
+
+/* Header responsiveness */
+@media screen and (max-width: 700px) {
+
+}
