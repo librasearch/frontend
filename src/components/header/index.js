@@ -1,5 +1,6 @@
 import { h } from 'preact';
 import { Link } from 'preact-router/match';
+// import { Visible } from 'preact-visible';
 import style from './style';
 
 const Header = () => (
@@ -16,6 +17,7 @@ const Header = () => (
 				<Link activeClassName={style.active} href="/developer">Developer</Link>
 			</nav>
 		</div>
+		<button>Press me</button>
 	</header>
 );
 
