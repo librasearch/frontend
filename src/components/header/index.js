@@ -63,7 +63,7 @@ export default class Header extends Component {
 		return (
 			<header class={style.header}>
 				<div>
-					<Link href="/"><img src="../../assets/librasearch.png" alt="Librasearch logo"/></Link>
+					<Link onClick={this.linkCloseMenu} href="/"><img src="../../assets/librasearch.png" alt="Librasearch logo"/></Link>
 				</div>
 				<div>
 					<nav>

@@ -1,7 +1,7 @@
 .header {
 	height: 70px;
 	width: 100%;
-	position: fixed;
+	position: absolute;
 	top: 0;
 	background-color: #2e2f3b;
 	padding: 0px 420px 0px 420px;
@@ -75,7 +75,7 @@ nav>a:last-child:hover {
 		padding: 0px 0px 0px 0px;
 	}
 	.header > div:nth-child(1) {
-		padding-left: 30px;
+		padding-left: 23px;
 	}
 }
 

@@ -1,11 +1,15 @@
+/* eslint-disable react/prefer-stateless-function */
 import { h } from 'preact';
-import pageHeader from '../../components/pageHeader';
 import style from './style';
 
-const Transactions = () => (
-	<div class={style.transactions}>
-		<pageHeader title="Transactions" />
-	</div>
-);
-
-export default Transactions;
+export default class Transactions {
+	render() {
+		return (
+			<div class={style.transactions.section}>
+				<div className="pageItem">
+					something
+				</div>
+			</div>
+		);
+	}
+}
