@@ -1,5 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import { h } from 'preact';
+import PageHeader from '../../components/pageheader';
 import style from './style';
 
 export default class Transactions {
@@ -7,7 +8,7 @@ export default class Transactions {
 		return (
 			<div class={style.transactions.section}>
 				<div className="pageItem">
-					something
+					<PageHeader name="Transactions" linkName="All Transactions" />
 				</div>
 			</div>
 		);

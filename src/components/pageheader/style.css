@@ -1,0 +1,46 @@
+.pageheader {
+	border-bottom: 1px solid #565761;
+	margin-right: 13px;
+}
+
+.pageheader > div {
+	display: inline-block;
+	margin-top: -20px;
+	margin-bottom: -5px;
+}
+
+.pageheader > div:last-child {
+	float: right;
+}
+.pageheader > div > h1 {
+	font-size: 24px;
+}
+
+.pageheader > div > p {
+	font-size: 15px;
+	margin-top: 20px;
+}
+
+.pageheader > div > p > a {
+	color: #3750ff;
+	text-decoration: none;
+	transition: 0.1s ease-in-out;
+}
+
+.pageheader > div > p > a:hover {
+	color: #2d42e6;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+	.pageheader {
+		padding-bottom: 23px;
+	}
+	.pageheader > div {
+		width: 100%;
+		margin-bottom: 0px;
+	}
+	.pageheader > div > p {
+		margin-top: 10px;
+	}
+}
