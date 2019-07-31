@@ -1,11 +1,16 @@
 import { h } from 'preact';
+import Subfooter from '../../components/subfooter';
 import style from './style';
 
-const Home = () => (
-	<div class={style.home}>
-		<h1>Home</h1>
-		<p>This is the Home component.</p>
-	</div>
-);
-
-export default Home;
+export default class Home {
+	render() {
+		return (
+			<div class={style.developer}>
+				<div className="pageItem">
+					<p>Something</p>
+				</div>
+				<Subfooter />
+			</div>
+		);
+	}
+}

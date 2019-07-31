@@ -84,7 +84,7 @@ nav>a:last-child:hover {
 		display: none;
 	}
 	.header > div:nth-child(3) {
-		width: 455px;
+		width: 458px;
 		margin-left: calc(100% - 465px);
 		margin-right: 20px;
 		border-radius: 5px;

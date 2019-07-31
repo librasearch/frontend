@@ -1,0 +1,48 @@
+.subfooter {
+	width: 100%;
+	position: absolute;
+	bottom: 70px;
+	background-color: #393a49;
+	color: #fff;
+	padding: 40px 0px 40px 0px;
+}
+.subfooter > div {
+	margin-top: 0px;
+}
+.subfooter > div > div {
+	display: inline-block;
+	width: 33.3%;
+}
+.subfooter > div > div > h3 {
+	font-size: 20px;
+}
+.subfooter > div > div > ul {
+	list-style: none;
+	padding: 0px;
+}
+.subfooter > div > div > ul > li {
+	margin: 15px 0px 15px 0px;
+}
+.subfooter > div > div > ul > li > a {
+	text-decoration: none;
+	font-size: 16px;
+	color: #656672;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #656672;
+	transition: 0.15s ease-in-out;
+}
+.subfooter > div > div > ul > li > a:hover {
+	color: #3750ff;
+	border-bottom-color: #3750ff;
+	padding-bottom: 0px;
+}
+@media screen and (max-width: 750px) {
+	.subfooter > div > div {
+		width: 100%;
+	}
+}
+@media screen and (max-width: 700px) {
+	.subfooter {
+		bottom: 100px;
+	}
+}

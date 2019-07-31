@@ -2,6 +2,7 @@ import { h, Component } from 'preact';
 import { Router } from 'preact-router';
 
 import Header from './header';
+import Footer from './footer';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
@@ -31,6 +32,7 @@ export default class App extends Component {
 					<Faucet path="/faucet" />
 					<Developer path="/developer" />
 				</Router>
+				<Footer />
 			</div>
 		);
 	}
