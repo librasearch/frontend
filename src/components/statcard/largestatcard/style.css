@@ -1,6 +1,7 @@
 .largestatcard > div {
 	width: 100%;
 	margin-top: 25px;
+	margin-bottom: 25px;
 	border-radius: 10px;
 	background-color: #2e2f3c;
 	border: 1px solid #363747;

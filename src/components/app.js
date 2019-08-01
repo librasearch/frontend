@@ -3,6 +3,7 @@ import { Router } from 'preact-router';
 
 import Header from './header';
 import Footer from './footer';
+// import TopSearch from './topsearch';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
