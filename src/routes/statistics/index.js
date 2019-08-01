@@ -1,15 +1,17 @@
 import { h } from 'preact';
 import PageHeader from '../../components/pageheader';
+import LargeStatCard from '../../components/statcard/largestatcard';
 import style from './style';
 
-const Statistics = () => (
-	<div class={style.statistics}>
-		<div className="pageItem">
-			<PageHeader name="Statistics" linkName="Network Statistics" />
-			<h1>Statistics</h1>
-			<p>This is the statistics component.</p>
-		</div>
-	</div>
-);
-
-export default Statistics;
+export default class Statistics {
+	render() {
+		return (
+			<div class={style.statistics}>
+				<div className="pageItem">
+					<PageHeader name="Statistics" linkName="Network Statistics" />
+					<LargeStatCard />
+				</div>
+			</div>
+		);
+	}
+}
