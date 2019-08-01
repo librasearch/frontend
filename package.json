@@ -35,7 +35,9 @@
     "preact-router": "^2.5.7",
     "preact-visible": "^1.0.1",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-hamburger-button": "^0.0.1"
+    "react-hamburger-button": "^0.0.1",
+    "socket.io-client": "^2.2.0",
+    "websocket": "^1.0.29"
   },
   "jest": {
     "verbose": true,
