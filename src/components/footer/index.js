@@ -14,9 +14,8 @@ export default class Footer extends Component {
 					</div>
 					<div>
 						<nav class={style.footerNav}>
-							<Link activeClassName={style.active} href="/">Twitter</Link>
-							<Link activeClassName={style.active} href="/transactions">Privacy Policy</Link>
-							<Link activeClassName={style.active} href="/statistics">Contact Us</Link>
+							<a activeClassName={style.active} target="_blank" rel="noopener noreferrer" href="https://twitter.com/_anishagnihotri">Twitter</a>
+							<a activeClassName={style.active} href="mailto:info@librasearch.org">Contact Us</a>
 						</nav>
 					</div>
 				</div>

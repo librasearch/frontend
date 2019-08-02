@@ -30,9 +30,10 @@
 	background-color: transparent;
 	color: #565761;
 }
-.footerNav > a:last-child {
-	background-color: transparent !important;
-	color: #fefefe !important;
+
+.footerNav > a:last-child:hover {
+	background-color: transparent;
+	color: #fefefe;
 }
 
 @media screen and (max-width: 700px) {

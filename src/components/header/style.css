@@ -54,7 +54,7 @@ nav>a:hover {
 
 nav>a:last-child {
 	background-color: #3750ff;
-	color: #fefefe !important;
+	color: #fefefe;
 	border-radius: 5px;
 	padding: 10px 15px 10px 15px;
 	transition: 0.15s ease-in-out;
