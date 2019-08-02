@@ -8,7 +8,7 @@ export default class Version {
 		return (
 			<div class={style.developer}>
 				<div className="pageItem">
-					<PageHeader name="Transaction Details (849019)" parentLink="/transactions" parentLinkName="Transactions" linkName="Transaction Details" />
+					<PageHeader name="Transaction Details" parentLink="/transactions" parentLinkName="Transactions" linkName="Transaction Details" />
 					<VersionDetails />
 				</div>
 			</div>

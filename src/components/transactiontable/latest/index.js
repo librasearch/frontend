@@ -1,6 +1,5 @@
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
-// import MaterialTable from 'material-table';
 import style from './style';
 
 // TODO: fix this navigation, and random last child highlight

@@ -2,7 +2,6 @@
 	width: 100%;
 	border-radius: 10px;
 	margin: 25px 0px 25px 0px;
-	padding: 15px;
 	background-color: #2e2f3c;
 	border: 1px solid #363747;
 	-webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
@@ -12,11 +11,23 @@
 .versiondetails > div > div {
 	width: 100%;
 	display: inline-block;
+	padding: 0px 15px 0px 15px;
+	border-bottom: 1px solid #363747;
+}
+.versiondetails > div > div:first-child {
+	background-color: #30313f;
+	margin-top: 0px;
+	border-top-left-radius: 10px;
+	border-top-right-radius: 10px;
+	border-bottom: 2px solid #363747;
+}
+.versiondetails > div > div:last-child {
+	border-bottom-right-radius: 10px;
+	border-bottom-left-radius: 10px;
 }
 .versiondetails > div > div > p:first-child {
 	width: 250px;
 	height: 100%;
-	background-color: #000;
 	display: inline-block;
 }
 
@@ -24,4 +35,20 @@
 	width: calc(100% - 250px);
 	height: 100%;
 	display: inline-block;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 600px) {
+	.versiondetails > div > div > p {
+		width: 100% !important;
+		margin-block-start: 0px;
+		margin-block-end: 0px;
+	}
+	.versiondetails > div > div > p:first-child {
+		margin-top: 10px;
+		padding-bottom: 5px;
+	}
+	.versiondetails > div > div > p:last-child {
+		padding-bottom: 10px;
+	}
 }
