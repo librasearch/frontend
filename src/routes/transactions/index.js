@@ -9,7 +9,7 @@ export default class Transactions {
 		return (
 			<div class={style.transactions.section}>
 				<div className="pageItem">
-					<PageHeader name="Transactions" linkName="All Transactions" />
+					<PageHeader name="Transactions" parentLink="/" parentLinkName="Home" linkName="All Transactions" />
 					<SmallStatCard />
 				</div>
 			</div>

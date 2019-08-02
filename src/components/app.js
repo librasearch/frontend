@@ -12,6 +12,10 @@ import Statistics from '../routes/statistics';
 import Faucet from '../routes/faucet';
 import Developer from '../routes/developer';
 
+// Dynamically generated routes
+import Address from '../routes/address';
+import Version from '../routes/version';
+
 export default class App extends Component {
 	
 	/** Gets fired when the route changes.
@@ -32,6 +36,8 @@ export default class App extends Component {
 					<Statistics path="/statistics" />
 					<Faucet path="/faucet" />
 					<Developer path="/developer" />
+					<Address path="/address" />
+					<Version path="/version" />
 				</Router>
 				<Footer />
 			</div>

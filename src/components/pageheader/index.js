@@ -11,7 +11,7 @@ export default class PageHeader extends Component {
 					<h1>{ props.name }</h1>
 				</div>
 				<div>
-					<p><Link href="/">Home</Link> / { props.linkName }</p>
+					<p><Link href={props.parentLink}>{ props.parentLinkName }</Link> / { props.linkName }</p>
 				</div>
 			</div>
 		);

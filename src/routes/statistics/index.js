@@ -8,7 +8,7 @@ export default class Statistics {
 		return (
 			<div class={style.statistics}>
 				<div className="pageItem">
-					<PageHeader name="Statistics" linkName="Network Statistics" />
+					<PageHeader name="Statistics" parentLink="/" parentLinkName="Home" linkName="Network Statistics" />
 					<LargeStatCard />
 				</div>
 			</div>

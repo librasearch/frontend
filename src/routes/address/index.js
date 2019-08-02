@@ -1,15 +1,15 @@
 import { h } from 'preact';
-import PageHeader from '../../components/pageheader';
+import Subfooter from '../../components/subfooter';
 import style from './style';
 
-export default class Header {
+export default class Version {
 	render() {
 		return (
 			<div class={style.developer}>
 				<div className="pageItem">
-					<PageHeader name="Developer" parentLink="/" parentLinkName="Home" linkName="Developer Resources" />
 					<p>Something</p>
 				</div>
+				<Subfooter />
 			</div>
 		);
 	}

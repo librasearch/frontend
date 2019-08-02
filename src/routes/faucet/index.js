@@ -5,7 +5,7 @@ import style from './style';
 const Faucet = () => (
 	<div class={style.faucet}>
 		<div className="pageItem">
-			<PageHeader name="Faucet" linkName="Faucet" />
+			<PageHeader name="Faucet" parentLink="/" parentLinkName="Home" linkName="Faucet" />
 			<h1>Faucet</h1>
 			<p>This is the developer component.</p>
 		</div>
