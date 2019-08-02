@@ -23,7 +23,7 @@ export default class LargeStatCard extends Component {
 				<div>
 					<div>
 						<div>
-							<p>SENT TRANSACTIONS (24H)</p>
+							<p>LATEST VERSION</p>
 						</div>
 						<div>
 							<h1>{ this.state.value1[0] }</h1>
@@ -41,7 +41,7 @@ export default class LargeStatCard extends Component {
 					</div>
 					<div>
 						<div>
-							<p>AVERAGE TX FEE</p>
+							<p>SENT TRANSACTIONS (24H)</p>
 						</div>
 						<div>
 							<h1>{ this.state.value3[0] }</h1>
@@ -50,7 +50,7 @@ export default class LargeStatCard extends Component {
 					</div>
 					<div>
 						<div>
-							<p>SENT TRANSACTIONS (24H)</p>
+							<p>P2P / MINT TRANSACTIONS</p>
 						</div>
 						<div>
 							<h1>{ this.state.value4[0] }</h1>
@@ -59,7 +59,7 @@ export default class LargeStatCard extends Component {
 					</div>
 					<div>
 						<div>
-							<p>LIBRA VOLUME (24H)</p>
+							<p>AVERAGE TPS</p>
 						</div>
 						<div>
 							<h1>{ this.state.value5[0] }</h1>

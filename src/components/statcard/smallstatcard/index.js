@@ -35,7 +35,7 @@ export default class SmallStatCard extends Component {
 				<div>
 					<div>
 						<div>
-							<p>SENT TRANSACTIONS (24H)</p>
+							<p>UNIQUE ADDRESSES</p>
 						</div>
 						<div>
 							<h1>{ this.state.value1[0] }</h1>
@@ -44,7 +44,7 @@ export default class SmallStatCard extends Component {
 					</div>
 					<div>
 						<div>
-							<p>LIBRA VOLUME (24H)</p>
+							<p>TOTAL TRANSACTIONS</p>
 						</div>
 						<div>
 							<h1>{ this.state.value2[0] }</h1>
@@ -53,7 +53,7 @@ export default class SmallStatCard extends Component {
 					</div>
 					<div>
 						<div>
-							<p>AVERAGE TX FEE</p>
+							<p>TOTAL LIBRA SUPPLY</p>
 						</div>
 						<div>
 							<h1>{ this.state.value3[0] }</h1>
