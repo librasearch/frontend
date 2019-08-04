@@ -18,7 +18,7 @@ export default class LatestTransactionTable extends Component {
 					// Add mint / p2p option.
 					if (result[i].from === '0000000000000000000000000000000000000000000000000000000000000000') {
 						result[i].type = 'Mint';
-						result[i].from = 'Minter';
+						result[i].from = 'Minting Account';
 					}
 					else {
 						result[i].type = 'P2P';
@@ -45,7 +45,7 @@ export default class LatestTransactionTable extends Component {
 
 		this.state = {
 			latestTransactions: [], // Initializing empty latestTransactions array
-			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link>},{ Header: 'EXPIRATION TIME',accessor: 'time'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value' },{ Header: 'TX FEE',accessor: 'gas_price' }] // Setting up dynamic table columns
+			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link> },{ Header: 'EXPIRATION TIME',accessor: 'time'},{Header: 'TYPE', accessor: 'type'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value', Cell: props => <span>{props.value} <span>LIB</span></span>},{ Header: 'TX FEE',accessor: 'gas_price', Cell: props => <span>{props.value} <span>LIB</span></span> }] // Setting up dynamic table columns
 		};
 
 		this.pullLatest = this.pullLatest.bind(this); // Binding this to pullLatest()
@@ -59,16 +59,18 @@ export default class LatestTransactionTable extends Component {
 
 	render() {
 		return (
-			<div>
-				<div className="pageItem">
-					<ReactTable
-						data={this.state.latestTransactions}
-						columns={this.state.tableColumns}
-						defaultPageSize={15}
-						showPagination={false}
-						className={'latesttable'}
-					/>
+			<div class={style.latesttbl}>
+				<div>
+					<p>Latest Transactions</p>
+					<Link href='/transactions'>View All</Link>
 				</div>
+				<ReactTable
+					data={this.state.latestTransactions}
+					columns={this.state.tableColumns}
+					defaultPageSize={15}
+					showPagination={false}
+					className={'latesttable'}
+				/>
 			</div>
 		);
 	}
