@@ -34,10 +34,16 @@
 	color: #8c8ca6;
 }
 
-
-
+.latesttbl > div > div {
+	overflow-x: auto;
+}
 
 /* Table header */
+.latesttbl > div > div > div:first-child {
+	background-color: #363747 !important;
+	height: 45px;
+	padding-left: 15px;
+}
 .latesttbl > div > div > div:first-child > div > div {
 	display: inline-block;
 	color: #707294;
@@ -45,50 +51,67 @@
 	font-size: 13.5px;
 	padding-top: 15.75px;
 }
-.latesttbl > div > div > div:first-child {
-	background-color: #363747 !important;
-	height: 45px;
-}
-.latesttbl > div > div > div:first-child > div > div:nth-child(1) {
 
-	padding-left: 15px;
+.latesttbl > div > div > div:first-child > div > div:nth-child(1) {
+	width: 75px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(2) {
-	width: 150px !important;
+	width: 130px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(3) {
-
+	width: 50px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(4) {
-	width: 200px !important;
+	width: 170px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(5) {
-
+	width: calc(100% - 615px) !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(6) {
-
+	width: 100px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(7) {
-
+	width: 60px !important;
 }
 
-
-
-
 /* Table body */ 
+.latesttbl > div > div > div:last-child > div {
+	padding-left: 15px;
+	border-bottom: 1.5px solid #363747;
+}
+.latesttbl > div > div > div:last-child > div:last-child {
+	border-bottom: none;
+}
 .latesttbl > div > div > div:last-child > div > div > div {
 	display: inline-block;
 	font-size: 16px;
 	height: 50px;
 	padding-top: 17px;
-	border-bottom: 1.5px solid #363747;
-}
-.latesttbl > div > div > div:last-child > div:last-child > div > div {
-	border-bottom: none !important;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(1) {
-	padding-left: 15px;
+	width: 75px !important;
 }
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(2) {
+	width: 130px !important;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(3) {
+	width: 50px !important;
+	color: #707294;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(4) {
+	width: 170px !important;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(5) {
+	width: calc(100% - 615px) !important;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(6) {
+	width: 100px !important;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(7) {
+	width: 60px !important;
+}
+
+/* Additional styling */
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(1) > a {
 	color: #3750ff;
 	border: 1px solid #3750ff;
@@ -98,40 +121,32 @@
 	font-size: 14px;
 	transition: 0.1s ease-in-out;
 }
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(1) > a:hover {
-	color: #fefefe;
-	background-color: #3750ff;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(2) {
-	width: 150px !important;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(3) {
-	color: #707294;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(4) {
-	width: 200px !important;
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(5) > a {
+	color: #3750ff;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+	width: 90%;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(4) > a {
 	color: #3750ff;
 	text-decoration: none;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(5) {
-	width: 400px !important;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(5) > a {
-	color: #3750ff;
-	width: 200px;
-	text-decoration: none;
-	min-width: 10% !important;
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(6) {
-
-}
-.latesttbl > div > div > div:last-child > div > div > div:nth-child(7) {
-
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+	width: 90%;
 }
 .latesttbl > div > div > div:last-child > div > div > div > span > span {
 	color: #707294;
+}
+.latesttbl > div > div > div:last-child > div > div > div:nth-child(1) > a:hover {
+	color: #fefefe;
+	background-color: #3750ff;
 }
 .latesttbl > div > div:last-child {
 	display: none !important;
