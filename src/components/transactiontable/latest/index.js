@@ -2,6 +2,7 @@
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
 import ReactTable from 'react-table';
+import moment from 'moment';
 import axios from 'axios';
 import style from './style';
 
@@ -25,13 +26,15 @@ export default class LatestTransactionTable extends Component {
 						result[i].type = 'P2P';
 					}
 
-					// Fix libra value to use top-level units.
+					// Fix libra value to use top-level units by dividing by a million
 					result[i].value = result[i].value/1000000;
+
+					// Prettify date formatting via Moment
+					result[i].time = moment.unix(result[i].time).fromNow();
 				}
 				this.setState({
 					latestTransactions: result // Set latestTransactions to equal resulting data
 				});
-				console.log(this.state.latestTransactions);
 			}).catch(err => {
 				// Catch errors if any
 				console.log('Please contact support. There seems to be an error. Error code:' + err);
@@ -53,7 +56,7 @@ export default class LatestTransactionTable extends Component {
 	// On mount component update.
 	componentDidMount() {
 		this.pullLatest; // First pull from '/latest'
-		setInterval(this.pullLatest, 5000);
+		setInterval(this.pullLatest, 500);
 	}
 	
 	render() {
