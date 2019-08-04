@@ -1,6 +1,7 @@
 /* eslint-disable no-console */
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
+import ReactTable from 'react-table';
 import axios from 'axios';
 import style from './style';
 
@@ -9,12 +10,10 @@ export default class LatestTransactionTable extends Component {
 	pullLatest() {
 		axios.get('http://localhost:3000/latest')
 			.then(response => {
-				const result = JSON.stringify(response.data); // Stringify response data
-
+				const result = response.data; // Stringify response data
 				this.setState({
 					latestTransactions: result // Set latestTransactions to equal resulting data
 				});
-
 				console.log(this.state.latestTransactions);
 			}).catch(err => {
 				// Catch errors if any
@@ -40,9 +39,39 @@ export default class LatestTransactionTable extends Component {
 	}
 	
 	render() {
+		let columns = [
+			{
+				Header: 'TX ID',
+				accessor: '_id'
+			},
+			{
+				Header: 'EXPIRATION TIME',
+				accessor: 'time'
+			},
+			{
+				Header: 'FROM',
+				accessor: 'from'
+			},
+			{
+				Header: 'TO',
+				accessor: 'to'
+			},
+			{
+				Header: 'AMOUNT',
+				accessor: 'value'
+			},
+			{
+				Header: 'TX FEE',
+				accessor: 'gas_price'
+			}
+		];
 		return (
 			<footer class={style.latesttable}>
 				<div className="pageItem">
+					<ReactTable
+						data={this.state.latestTransactions}
+						columns={columns}
+					/>
 				</div>
 			</footer>
 		);
