@@ -8,7 +8,7 @@ import moment from 'moment';
 import axios from 'axios';
 import style from './style';
 
-export default class LatestTransactionTable extends Component {
+export default class AllTransactionTable extends Component {
 	// Query pull function
 	pullLatest() {
 		axios.get('http://localhost:3000/latest')
@@ -32,7 +32,8 @@ export default class LatestTransactionTable extends Component {
 					result[i].time = moment.unix(result[i].time).fromNow();
 				}
 				this.setState({
-					latestTransactions: result // Set latestTransactions to equal resulting data
+					latestTransactions: result, // Set latestTransactions to equal resulting data
+					latestVersion: commaNumber(result[0]._id)
 				});
 			}).catch(err => {
 				// Catch errors if any
@@ -45,6 +46,7 @@ export default class LatestTransactionTable extends Component {
 		super();
 
 		this.state = {
+			latestVersion: 0,
 			latestTransactions: [], // Initializing empty latestTransactions array
 			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link> },{ Header: 'EXPIRATION TIME',accessor: 'time'},{Header: 'TYPE', accessor: 'type'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value', Cell: props => <span>{props.value} <span>LIB</span></span>},{ Header: 'TX FEE',accessor: 'gas_price', Cell: props => <span>{props.value} <span>LIB</span></span> }] // Setting up dynamic table columns
 		};
@@ -60,17 +62,15 @@ export default class LatestTransactionTable extends Component {
 
 	render() {
 		return (
-			<div class={style.latesttbl}>
+			<div class={style.alltbl}>
 				<div>
-					<p>Latest Transactions</p>
-					<Link href='/transactions'>View All</Link>
+					<p>{this.state.latestVersion} transactions found</p>
 				</div>
 				<ReactTable
 					data={this.state.latestTransactions}
 					columns={this.state.tableColumns}
-					defaultPageSize={15}
-					showPagination={false}
-					className={'latesttable'}
+					defaultPageSize={25}
+					showPagination={true}
 				/>
 			</div>
 		);
