@@ -9,7 +9,7 @@ export default class Version {
 			<div class={style.developer}>
 				<div className="pageItem">
 					<PageHeader name="Transaction Details" parentLink="/transactions" parentLinkName="Transactions" linkName="Transaction Details" />
-					<VersionDetails />
+					<VersionDetails version={this.props.versionId}/>
 				</div>
 			</div>
 		);

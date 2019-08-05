@@ -3,12 +3,15 @@ import {  h , Component } from 'preact';
 import style from './style';
 
 export default class VersionDetails extends Component {
+	componentDidMount() {
+		console.log(this.props.version);
+	}
 	render() {
 		return (
 			<div class={style.versiondetails}>
 				<div>
 					<div>
-						<h3>Transaction #94909</h3>
+						<h3>Transaction #{this.props.version}</h3>
 					</div>
 					<div>
 						<p>Something:</p>

@@ -64,17 +64,22 @@ export default class AllTransactionTable extends Component {
 
 	render() {
 		return (
-			<div class={style.alltbl}>
-				<div>
-					<p>{this.state.latestVersion} transactions found</p>
+			<div>
+				<div class={style.alertBeta}>
+					<p>Note: this feature is currently in beta. Thus, it may take upwards of 5 seconds to load all transactions.</p>
 				</div>
-				<ReactTable
-					data={this.state.latestTransactions}
-					columns={this.state.tableColumns}
-					defaultPageSize={25}
-					showPagination={true}
-					showPageJump={false}
-				/>
+				<div class={style.alltbl}>
+					<div>
+						<p>{this.state.latestVersion} transactions found</p>
+					</div>
+					<ReactTable
+						data={this.state.latestTransactions}
+						columns={this.state.tableColumns}
+						defaultPageSize={25}
+						showPagination={true}
+						showPageJump={false}
+					/>
+				</div>
 			</div>
 		);
 	}
