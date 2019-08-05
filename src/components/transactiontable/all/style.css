@@ -64,9 +64,6 @@
 	padding-left: 15px;
 	border-bottom: 1.5px solid #363747;
 }
-.alltbl > div > div > div:last-child > div:last-child {
-	border-bottom: none;
-}
 .alltbl > div > div > div:last-child > div > div > div {
 	display: inline-block;
 	font-size: 16px;
@@ -135,4 +132,47 @@
 }
 .alltbl > div > div:last-child {
 	display: none !important;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) {
+	background-color: #363747 !important;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div {
+	color: #707294;
+	font-weight: 700;
+	float: right;
+	padding: 8px 15px 40px 0px;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div {
+	display: inline-block;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+	color: #fff;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+	padding: 7px 10px 7px 10px;
+	background-color: #434356;
+	border-radius: 5px;
+	border: none;
+	color: #6f6f90;
+	transition: 0.15s ease-in-out;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button:hover {
+	background-color: #646482;
+	color: #8c8ca6;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(2) > select {
+	margin-left: 10px;
+}
+
+/* TODO: Fix this styling on small displays. */
+@media screen and (max-width: 400px) {
+	.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+		font-size: 11px;
+	}
 }

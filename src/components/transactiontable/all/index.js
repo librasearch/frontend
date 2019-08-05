@@ -71,6 +71,7 @@ export default class AllTransactionTable extends Component {
 					columns={this.state.tableColumns}
 					defaultPageSize={25}
 					showPagination={true}
+					showPageJump={false}
 				/>
 			</div>
 		);
