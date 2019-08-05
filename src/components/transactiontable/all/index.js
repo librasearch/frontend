@@ -11,7 +11,7 @@ import style from './style';
 export default class AllTransactionTable extends Component {
 	// Query pull function
 	pullLatest() {
-		axios.get('http://localhost:3000/latest')
+		axios.get('http://localhost:3000/all')
 			.then(response => {
 				const result = response.data; // Setup response.data as result variable
 				for (let i = 0; i < result.length; i++) {
@@ -57,8 +57,10 @@ export default class AllTransactionTable extends Component {
 	// On mount component update.
 	componentDidMount() {
 		this.pullLatest; // First pull from '/latest'
-		setInterval(this.pullLatest, 500);
+		setTimeout(this.pullLatest, 500);
 	}
+
+	component
 
 	render() {
 		return (
