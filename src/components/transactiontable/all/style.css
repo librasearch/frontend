@@ -56,13 +56,13 @@
 	width: 50px !important;
 }
 .alltbl > div > div > div:first-child > div > div:nth-child(4) {
-	width: 170px !important;
+	width: 150px !important;
 }
 .alltbl > div > div > div:first-child > div > div:nth-child(5) {
-	width: calc(100% - 615px) !important;
+	width: calc(100% - 620px) !important;
 }
 .alltbl > div > div > div:first-child > div > div:nth-child(6) {
-	width: 100px !important;
+	width: 125px !important;
 }
 .alltbl > div > div > div:first-child > div > div:nth-child(7) {
 	width: 60px !important;
@@ -90,13 +90,13 @@
 	color: #707294;
 }
 .alltbl > div > div > div:last-child > div > div > div:nth-child(4) {
-	width: 170px !important;
+	width: 150px !important;
 }
 .alltbl > div > div > div:last-child > div > div > div:nth-child(5) {
-	width: calc(100% - 615px) !important;
+	width: calc(100% - 620px) !important;
 }
 .alltbl > div > div > div:last-child > div > div > div:nth-child(6) {
-	width: 100px !important;
+	width: 125px !important;
 }
 .alltbl > div > div > div:last-child > div > div > div:nth-child(7) {
 	width: 60px !important;

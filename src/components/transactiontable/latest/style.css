@@ -62,13 +62,13 @@
 	width: 50px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(4) {
-	width: 170px !important;
+	width: 150px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(5) {
-	width: calc(100% - 615px) !important;
+	width: calc(100% - 620px) !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(6) {
-	width: 100px !important;
+	width: 125px !important;
 }
 .latesttbl > div > div > div:first-child > div > div:nth-child(7) {
 	width: 60px !important;
@@ -99,13 +99,13 @@
 	color: #707294;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(4) {
-	width: 170px !important;
+	width: 150px !important;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(5) {
-	width: calc(100% - 615px) !important;
+	width: calc(100% - 620px) !important;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(6) {
-	width: 100px !important;
+	width: 125px !important;
 }
 .latesttbl > div > div > div:last-child > div > div > div:nth-child(7) {
 	width: 60px !important;
