@@ -1,14 +1,12 @@
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
-import { Link } from 'preact-router/match';
 import style from './style';
 
-// TODO: fix this navigation, and random last child highlight
 export default class Footer extends Component {
 	render() {
 		return (
 			<footer class={style.footer}>
-				<div className="pageItem">
+				<div class={style.surround}>
 					<div>
 						<p>&copy; 2019 <span>Librasearch</span>. All rights reserved.</p>
 					</div>

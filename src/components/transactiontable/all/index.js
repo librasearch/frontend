@@ -11,7 +11,7 @@ import style from './style';
 export default class AllTransactionTable extends Component {
 	// Query pull function
 	pullLatest() {
-		axios.get('http://localhost:3000/all')
+		axios.get('http://localhost:3010/all')
 			.then(response => {
 				const result = response.data; // Setup response.data as result variable
 				for (let i = 0; i < result.length; i++) {
