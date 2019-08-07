@@ -2,15 +2,14 @@
 import {  h , Component } from 'preact';
 import style from './style';
 
-// TODO: fix this navigation, and random last child highlight
-export default class TopSearch extends Component {
+export default class Search extends Component {
 	render() {
 		return (
-			<footer class={style.topsearch}>
+			<div class={style.search}>
 				<div className="pageItem">
-					<div />
+					<input type="search" placeholder="Enter Address / Transaction ID" />
 				</div>
-			</footer>
+			</div>
 		);
 	}
 }

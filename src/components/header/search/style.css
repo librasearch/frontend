@@ -1,0 +1,10 @@
+.search {
+	height: 40px;
+	background-color: #2c42e4;
+	display: none; /* Temporary to avoid padding when testing */
+}
+.search > div > input {
+	padding: 10px 0px 10px 0px;
+	font-size: 14px;
+	margin-top: 2px;
+}

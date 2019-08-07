@@ -3,7 +3,7 @@ import { Router } from 'preact-router';
 
 import Header from './header';
 import Footer from './footer';
-// import TopSearch from './topsearch';
+import Search from './header/search';
 
 // Code-splitting is automated for routes
 import Home from '../routes/home';
@@ -29,6 +29,7 @@ export default class App extends Component {
 	render() {
 		return (
 			<div id="app">
+				<Search />
 				<Header />
 				<Router onChange={this.handleRoute}>
 					<Home path="/" />

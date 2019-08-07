@@ -1,5 +1,6 @@
 import {  h , Component } from 'preact';
 import { Link } from 'preact-router/match';
+import Search from './search';
 import style from './style';
 import { HamburgerButton } from 'react-hamburger-button';
 
@@ -61,53 +62,55 @@ export default class Header extends Component {
 
 	render() {
 		return (
-			<header class={style.header}>
-				<div>
-					<Link onClick={this.linkCloseMenu} href="/"><img src="../../assets/librasearch.png" alt="Librasearch logo"/></Link>
-				</div>
-				<div>
-					<nav>
-						<Link activeClassName={style.active} href="/">Home</Link>
-						<Link activeClassName={style.active} href="/transactions">Transactions</Link>
-						<Link activeClassName={style.active} href="/statistics">Statistics</Link>
-						<Link activeClassName={style.active} href="/faucet">Faucet</Link>
-						<Link activeClassName={style.active} href="/developer">Developer</Link>
-					</nav>
+			<div>
+				<header class={style.header}>
+					<div>
+						<Link onClick={this.linkCloseMenu} href="/"><img src="../../assets/librasearch.png" alt="Librasearch logo"/></Link>
+					</div>
+					<div>
+						<nav>
+							<Link activeClassName={style.active} href="/">Home</Link>
+							<Link activeClassName={style.active} href="/transactions">Transactions</Link>
+							<Link activeClassName={style.active} href="/statistics">Statistics</Link>
+							<Link activeClassName={style.active} href="/faucet">Faucet</Link>
+							<Link activeClassName={style.active} href="/developer">Developer</Link>
+						</nav>
+						{
+							this.state.showMenuIcon
+								? (
+									<HamburgerButton
+										open={this.state.open}
+										onClick={this.showMenu}
+										strokeWidth={3}
+										color="#565761"
+										height={17}
+										width={25}
+									/>
+								)
+								: (
+									null
+								)
+						}
+					</div>
 					{
-						this.state.showMenuIcon
+						this.state.showMenu
 							? (
-								<HamburgerButton
-									open={this.state.open}
-									onClick={this.showMenu}
-									strokeWidth={3}
-									color="#565761"
-									height={17}
-									width={25}
-								/>
+								<div>
+									<nav>
+										<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/">Home</Link>
+										<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/transactions">Transactions</Link>
+										<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/statistics">Statistics</Link>
+										<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/faucet">Faucet</Link>
+										<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/developer">Developer</Link>
+									</nav>
+								</div>
 							)
 							: (
 								null
 							)
 					}
-				</div>
-				{
-					this.state.showMenu
-						? (
-							<div>
-								<nav>
-									<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/">Home</Link>
-									<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/transactions">Transactions</Link>
-									<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/statistics">Statistics</Link>
-									<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/faucet">Faucet</Link>
-									<Link onClick={this.linkCloseMenu} activeClassName={style.active} href="/developer">Developer</Link>
-								</nav>
-							</div>
-						)
-						: (
-							null
-						)
-				}
-			</header>
+				</header>
+			</div>
 		);
 	}
 }
