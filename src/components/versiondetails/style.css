@@ -90,19 +90,19 @@
 .libratext {
 	color: #707294 !important;
 }
+
 /* Responsiveness */
-/*
 @media screen and (max-width: 600px) {
-	.versiondetails > div > div > p {
+	.versiondetails > div > div >  div > p {
 		width: 100% !important;
 		margin-block-start: 0px;
 		margin-block-end: 0px;
 	}
-	.versiondetails > div > div > p:first-child {
+	.versiondetails > div > div > div > p:first-child {
 		margin-top: 10px;
 		padding-bottom: 5px;
 	}
-	.versiondetails > div > div > p:last-child {
+	.versiondetails > div > div > div > p:last-child {
 		padding-bottom: 10px;
 	}
-}*/
+}

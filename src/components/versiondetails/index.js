@@ -8,30 +8,35 @@ import axios from 'axios';
 import style from './style';
 
 export default class VersionDetails extends Component {
+	update() {
+		this.pullVersion;
+		setTimeout(this.pullVersion, 1);
+	}
 	pullVersion() {
+		// Make post request with the version from the address prop
 		axios.post('http://localhost:3000/', this.props.version)
 			.then(response => {
-				const result = response.data;
+				const result = response.data; // Save response to result const to be used for modification
 
-				result.linkFrom = result.from;
+				result.linkFrom = result.from; // Setup a linkFrom (because we rename the from for 'Minting Account')
 
 				if (result.from === '0000000000000000000000000000000000000000000000000000000000000000') {
-					result.type = 'Mint';
-					result.from = 'Minting Account';
+					result.type = 'Mint'; // Setup transaction types
+					result.from = 'Minting Account'; // Change from name in case of 64 0's
 				}
 				else {
-					result.type = 'P2P';
+					result.type = 'P2P'; // Setup transaction types
 				}
 
+				// Clean up LIB value
 				result.value = commaNumber(result.value/1000000);
 
 				// Prettify date formatting via Moment
 				result.time = moment.unix(result.time).fromNow();
 
 				this.setState({
-					postResponse: result
+					postResponse: result // Set new and cleaned result to equal postResponse
 				});
-				console.log(this.state.postResponse);
 			}).catch(err => {
 				console.log('Please contact support. There seems to be an error. Error code:' + err);
 			});
@@ -40,14 +45,14 @@ export default class VersionDetails extends Component {
 		super();
 
 		this.state = {
-			postResponse: []
+			postResponse: [] // Setup container for post response
 		};
 
 		this.pullVersion = this.pullVersion.bind(this);
+		this.update = this.update.bind(this);
 	}
 	componentDidMount() {
-		this.pullVersion;
-		setTimeout(this.pullVersion, 500);
+		this.update();
 	}
 	render() {
 		return (
@@ -79,11 +84,11 @@ export default class VersionDetails extends Component {
 						</div>
 						<div>
 							<p>Version ID:</p>
-							<p><Link href={`/version/${this.state.postResponse._id}`}>{this.state.postResponse._id}</Link></p>
+							<p>{this.state.postResponse._id}</p>
 						</div>
 						<div>
 							<p>Sequence Number:</p>
-							<p><Link href={`/version/${this.state.postResponse.seq_nr}`}>{this.state.postResponse.seq_nr}</Link></p>
+							<p><Link onClick={this.update} href={`/version/${this.state.postResponse.seq_nr}`}>{this.state.postResponse.seq_nr}</Link></p>
 						</div>
 						<div>
 							<p>Expiration Time:</p>

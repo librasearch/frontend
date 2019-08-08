@@ -58,6 +58,7 @@ nav>a:last-child {
 	border-radius: 5px;
 	padding: 10px 15px 10px 15px;
 	transition: 0.15s ease-in-out;
+	margin-right: 0px;
 }
 
 nav>a:last-child:hover {
@@ -76,6 +77,9 @@ nav>a:last-child:hover {
 	}
 	.header > div:nth-child(1) {
 		padding-left: 23px;
+	}
+	nav > a:last-child {
+		margin-right: 10px;
 	}
 }
 

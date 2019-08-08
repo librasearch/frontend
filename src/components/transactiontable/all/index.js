@@ -57,7 +57,7 @@ export default class AllTransactionTable extends Component {
 	// On mount component update.
 	componentDidMount() {
 		this.pullLatest; // First pull from '/latest'
-		setTimeout(this.pullLatest, 500);
+		setTimeout(this.pullLatest, 1);
 	}
 
 	render() {
