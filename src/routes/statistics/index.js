@@ -3,6 +3,7 @@ import PageHeader from '../../components/pageheader';
 import LargeStatCard from '../../components/statcard/largestatcard';
 import style from './style';
 import WIP from '../../components/underdevelopment';
+import XLStatCard from '../../components/statcard/xlstatcard';
 
 export default class Statistics {
 	render() {
@@ -12,6 +13,10 @@ export default class Statistics {
 					<PageHeader name="Statistics" parentLink="/" parentLinkName="Home" linkName="Network Statistics" />
 					<WIP />
 					<LargeStatCard />
+					<XLStatCard name="Some Statisic" />
+					<XLStatCard name="Some Statisic" />
+					<XLStatCard name="Some Statisic" />
+					<XLStatCard name="Some Statisic" />
 				</div>
 			</div>
 		);

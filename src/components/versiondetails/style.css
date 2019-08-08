@@ -25,14 +25,14 @@
 .versiondetails > div > div:nth-child(2) {
 	background-color: #373847;
 	width: calc(100% - 40px);
-	margin: 20px;
+	margin: 20px 20px 0px 20px;
 	border-radius: 10px;
 }
 
 .versiondetails > div > div:nth-child(3) {
 	background-color: #373847;
 	width: calc(100% - 40px);
-	margin: 20px;
+	margin: 20px 20px 0px 20px;
 	border-radius: 10px;
 }
 
