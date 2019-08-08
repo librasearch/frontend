@@ -11,7 +11,6 @@
 .versiondetails > div > div {
 	width: 100%;
 	display: inline-block;
-	padding: 0px 15px 0px 15px;
 	border-bottom: 1px solid #363747;
 }
 .versiondetails > div > div:first-child {
@@ -20,24 +19,79 @@
 	border-top-left-radius: 10px;
 	border-top-right-radius: 10px;
 	border-bottom: 2px solid #363747;
+	padding: 0px 15px 0px 15px;
 }
-.versiondetails > div > div:last-child {
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
+
+.versiondetails > div > div:nth-child(2) {
+	background-color: #373847;
+	width: calc(100% - 40px);
+	margin: 20px;
+	border-radius: 10px;
 }
-.versiondetails > div > div > p:first-child {
+
+.versiondetails > div > div:nth-child(3) {
+	background-color: #373847;
+	width: calc(100% - 40px);
+	margin: 20px;
+	border-radius: 10px;
+}
+
+.versiondetails > div > div:nth-child(4) {
+	background-color: #373847;
+	width: calc(100% - 40px);
+	margin: 20px;
+	border-radius: 10px;
+}
+
+.versiondetails > div > div > div:first-child {
+	background-color: #434457;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+}
+
+.versiondetails > div > div > div:first-child > p {
+	color: #8a8bb6 !important;
+	font-weight: 700 !important;
+}
+
+.versiondetails > div > div > div {
+	padding: 0px 15px 0px 15px;
+	border-bottom: 2px solid #444658;
+}
+
+.versiondetails > div > div > div:last-child {
+	border-bottom: none;
+}
+.versiondetails > div > div > div > p:first-child {
 	width: 250px;
 	height: 100%;
 	display: inline-block;
+	color: #707294;
+	font-weight: 500;
 }
 
-.versiondetails > div > div > p:last-child {
+.versiondetails > div > div > div > p:last-child {
 	width: calc(100% - 250px);
 	height: 100%;
 	display: inline-block;
 }
 
+.versiondetails > div > div > div > p:last-child > a {
+	color: #3750ff;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+	width: 90%;
+}
+
+.libratext {
+	color: #707294 !important;
+}
 /* Responsiveness */
+/*
 @media screen and (max-width: 600px) {
 	.versiondetails > div > div > p {
 		width: 100% !important;
@@ -51,4 +105,4 @@
 	.versiondetails > div > div > p:last-child {
 		padding-bottom: 10px;
 	}
-}
+}*/

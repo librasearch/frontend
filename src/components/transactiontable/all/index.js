@@ -60,8 +60,6 @@ export default class AllTransactionTable extends Component {
 		setTimeout(this.pullLatest, 500);
 	}
 
-	component
-
 	render() {
 		return (
 			<div>
