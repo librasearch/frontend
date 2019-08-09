@@ -7,6 +7,7 @@ import moment from 'moment';
 import axios from 'axios';*/
 import { Link } from 'preact-router/match';
 import style from './style';
+import AddressStatCard from '../statcard/addressstatcard';
 
 export default class AddressDetails extends Component {
 
@@ -29,6 +30,7 @@ export default class AddressDetails extends Component {
 					</div>
 				</div>
 				<div className="pageItem">
+					<AddressStatCard />
 					<div>
 						<p>Something</p>
 					</div>

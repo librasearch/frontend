@@ -1,0 +1,56 @@
+.smallstatcard > div {
+	width: 100%;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-top: -115px;
+}
+.smallstatcard > div > div {
+	text-align: left;
+}
+.smallstatcard > div > div:nth-child(1) {
+	margin-right: 1.5%;
+}
+.smallstatcard > div > div:nth-child(2) {
+	margin: 0px 1.5% 0px 1.5%;
+}
+.smallstatcard > div > div:nth-child(3) {
+	margin: 0px 1.5% 0px 1.5%;
+}
+.smallstatcard > div > div:nth-child(4) {
+	margin-left: 1.5%;
+}
+.smallstatcard > div > div {
+	height: 85px;
+	border-radius: 10px;
+	width: 22%;
+	display: inline-block;
+	background-color: #2e2f3c;
+	border: 1px solid #363747;
+	-webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	padding: 15px;
+}
+
+.smallstatcard > div > div > div > p {
+	padding-top: 0px;
+	margin-top: 0px;
+	font-size: 13.5px;
+	font-weight: 700;
+	color: #707294;
+}
+
+.smallstatcard > div > div > div > h1 {
+	font-size: 22px;
+	margin-top: -5px;
+	display: inline-block;
+}
+
+/* Responsivness */
+/* TODO: Fix small edge case 1600-1620px */
+@media screen and (max-width: 900px) {
+	.smallstatcard > div > div {
+		width: 100%;
+		margin: 7.5px 0% 7.5px 0% !important;
+	}
+}
