@@ -8,10 +8,11 @@ import moment from 'moment';
 import axios from 'axios';
 import style from './style';
 
+// TODO: Fix subfooter showing up???
 export default class AllTransactionTable extends Component {
 	// Query pull function
 	pullLatest() {
-		axios.post('http://localhost:3000/', this.props.address)
+		axios.post('http://localhost:3000/query/', this.props.address)
 			.then(response => {
 				const result = response.data.txs; // Setup response.data as result variable
 				for (let i = 0; i < result.length; i++) {

@@ -1,11 +1,7 @@
 .smallstatcard > div {
 	width: 100%;
-	text-align: center;
 	padding-bottom: 20px;
 	margin-top: -115px;
-}
-.smallstatcard > div > div {
-	text-align: left;
 }
 .smallstatcard > div > div:nth-child(1) {
 	margin-right: 1.5%;
@@ -22,7 +18,7 @@
 .smallstatcard > div > div {
 	height: 85px;
 	border-radius: 10px;
-	width: 22%;
+	width: 22.75%;
 	display: inline-block;
 	background-color: #2e2f3c;
 	border: 1px solid #363747;

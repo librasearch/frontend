@@ -8,7 +8,7 @@ import style from './style';
 export default class Transactions {
 	render() {
 		return (
-			<div class={style.transactions.section}>
+			<div class={style.transactions}>
 				<div className="pageItem">
 					<PageHeader name="Transactions" parentLink="/" parentLinkName="Home" linkName="All Transactions" />
 					<SmallStatCard />

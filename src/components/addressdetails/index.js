@@ -15,13 +15,21 @@ export default class AddressDetails extends Component {
 		setTimeout(this.pullAddress, 1);
 	}
 	pullAddress() {
-		axios.post('http://localhost:3000/', this.props.address)
+		axios.post('http://localhost:3000/query/', this.props.address)
 			.then(response => {
 				const result = response.data; // Save response to result const to be used for modification
 
 				// Add stat identifiers
-				result.statIn = 1;
-				result.statOut = 2;
+				result.statIn = 0;
+				result.statOut =0;
+				for (let i = 0; i < result.txs.length; i++) {
+					if (result.txs[i].from === this.props.address) {
+						result.statOut += 1;
+					}
+					else {
+						result.statIn += 1;
+					}
+				}
 				result.statRecent = result.txs[0]._id;
 				result.statFirst = result.txs[result.txs.length - 1]._id;
 				
@@ -50,6 +58,7 @@ export default class AddressDetails extends Component {
 	}
 	render() {
 		return (
+			// TODO: Fix the fact that update() is not called on child links.
 			<div class={style.addressdetails}>
 				<div>
 					<div className="pageItem">

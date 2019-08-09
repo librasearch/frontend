@@ -14,7 +14,7 @@ export default class VersionDetails extends Component {
 	}
 	pullVersion() {
 		// Make post request with the version from the address prop
-		axios.post('http://localhost:3010/query/', this.props.version)
+		axios.post('http://localhost:3000/query/', this.props.version)
 			.then(response => {
 				const result = response.data; // Save response to result const to be used for modification
 
