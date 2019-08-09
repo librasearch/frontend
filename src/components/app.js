@@ -37,7 +37,7 @@ export default class App extends Component {
 					<Statistics path="/statistics" />
 					<Faucet path="/faucet" />
 					<Developer path="/developer" />
-					<Address path="/address" />
+					<Address path="/address/:address" />
 					<Version path="/version/:versionId" />
 				</Router>
 				<Footer />

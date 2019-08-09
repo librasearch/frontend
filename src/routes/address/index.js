@@ -1,14 +1,13 @@
 import { h } from 'preact';
 import Subfooter from '../../components/subfooter';
+import AddressDetails from '../../components/addressdetails';
 import style from './style';
 
 export default class Version {
 	render() {
 		return (
 			<div class={style.developer}>
-				<div className="pageItem">
-					<p>Something</p>
-				</div>
+				<AddressDetails address={this.props.address} />
 				<Subfooter />
 			</div>
 		);
