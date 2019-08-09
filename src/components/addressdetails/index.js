@@ -2,15 +2,49 @@
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
 
-/*import commaNumber from 'comma-number';
-import moment from 'moment';
-import axios from 'axios';*/
+import commaNumber from 'comma-number';
+import AddressTable from '../transactiontable/addresses';
+import axios from 'axios';
 import { Link } from 'preact-router/match';
 import style from './style';
 import AddressStatCard from '../statcard/addressstatcard';
 
 export default class AddressDetails extends Component {
+	update() {
+		this.pullAddress;
+		setTimeout(this.pullAddress, 1);
+	}
+	pullAddress() {
+		axios.post('http://localhost:3000/', this.props.address)
+			.then(response => {
+				const result = response.data; // Save response to result const to be used for modification
 
+				// Add stat identifiers
+				result.statIn = 1;
+				result.statOut = 2;
+				result.statRecent = result.txs[0]._id;
+				result.statFirst = result.txs[result.txs.length - 1]._id;
+				
+				// Clean up LIB value formatting
+				result.balance = commaNumber(result.balance/1000000);
+
+				this.setState({
+					postResponse: result // Set new and cleaned result to equal postResponse
+				});
+			}).catch(err => {
+				console.log('Please contact support. There seems to be an error. Error code:' + err);
+			});
+	}
+	constructor() {
+		super();
+
+		this.state = {
+			postResponse: [] // Setup container for post response
+		};
+
+		this.pullAddress = this.pullAddress.bind(this);
+		this.update = this.update.bind(this);
+	}
 	componentDidMount() {
 		this.update();
 	}
@@ -25,15 +59,18 @@ export default class AddressDetails extends Component {
 						</div>
 						<div>
 							<p>Libra Balance</p>
-							<p>900,000 <span class={style.libraText}> LIB</span></p>
+							<p>{this.state.postResponse.balance} <span class={style.libraText}> LIB</span></p>
 						</div>
 					</div>
 				</div>
 				<div className="pageItem">
-					<AddressStatCard />
-					<div>
-						<p>Something</p>
-					</div>
+					<AddressStatCard
+						value1={this.state.postResponse.statIn}
+						value2={this.state.postResponse.statOut}
+						value3={this.state.postResponse.statRecent}
+						value4={this.state.postResponse.statFirst}
+					/>
+					<AddressTable address={this.props.address} />
 				</div>
 			</div>
 		);

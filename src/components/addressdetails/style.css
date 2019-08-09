@@ -7,10 +7,6 @@
 	padding: 30px 0px 45px 0px;
 }
 
-.addressdetails > div:first-child > div {
-
-}
-
 .addressdetails > div:first-child > div > div {
 	display: inline-block;
 	width: 50%;
@@ -58,7 +54,7 @@
 	color: #707294 !important;
 }
 
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 900px) { 
 	.addressdetails > div:first-child {
 		padding: 15px 0px 15px 0px;
 	}

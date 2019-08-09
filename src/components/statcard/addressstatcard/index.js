@@ -1,52 +1,43 @@
 /* eslint-disable react/prefer-stateless-function */
 import {  h , Component } from 'preact';
+import { Link } from 'preact-router/match';
 import style from './style';
 
 export default class AddressStatCard extends Component {
-	constructor() {
-		super();
-
-		this.state = {
-			value1: [1, 1],
-			value2: [2, 2],
-			value3: [3, 3]
-		};
-	}
-
 	render(props) {
 		return (
 			<div class={style.smallstatcard}>
 				<div>
 					<div>
 						<div>
-							<p>UNIQUE ADDRESSES</p>
+							<p>IN TRANSACTIONS</p>
 						</div>
 						<div>
-							<h1>{ this.state.value1[0] }</h1>
-						</div>
-					</div>
-					<div>
-						<div>
-							<p>TOTAL TRANSACTIONS</p>
-						</div>
-						<div>
-							<h1>{ this.state.value2[0] }</h1>
+							<h1>{ this.props.value1 }</h1>
 						</div>
 					</div>
 					<div>
 						<div>
-							<p>TOTAL LIBRA SUPPLY</p>
+							<p>OUT TRANSACTIONS</p>
 						</div>
 						<div>
-							<h1>{ this.state.value3[0] }</h1>
+							<h1>{ this.props.value2 }</h1>
 						</div>
 					</div>
 					<div>
 						<div>
-							<p>TOTAL LIBRA SUPPLY</p>
+							<p>RECENT TX SEEN</p>
 						</div>
 						<div>
-							<h1>{ this.state.value3[0] }</h1>
+							<h1><Link href={`/version/${this.props.value3}`}>{ this.props.value3 }</Link></h1>
+						</div>
+					</div>
+					<div>
+						<div>
+							<p>FIRST TX SEEN</p>
+						</div>
+						<div>
+							<h1><Link href={`/version/${this.props.value4}`}>{ this.props.value4 }</Link></h1>
 						</div>
 					</div>
 				</div>

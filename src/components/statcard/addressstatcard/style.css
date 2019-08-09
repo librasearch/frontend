@@ -46,6 +46,18 @@
 	display: inline-block;
 }
 
+.smallstatcard > div > div > div > h1 > a {
+	color: #fefefe;
+	text-decoration: none;
+	padding-bottom: 2px;
+	border-bottom: 1px dotted #fefefe;
+	transition: 0.1s ease-in-out;
+}
+
+.smallstatcard > div > div > div > h1 > a:hover {
+	padding-bottom: 0px;
+}
+
 /* Responsivness */
 /* TODO: Fix small edge case 1600-1620px */
 @media screen and (max-width: 900px) {

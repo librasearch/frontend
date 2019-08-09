@@ -1,0 +1,178 @@
+.alltbl {
+	width: 100%;
+	display: inline-block;
+	background-color: #2e2f3c;
+	border: 1px solid #363747;
+	-webkit-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	-moz-box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	box-shadow: 0px 0px 20px -2px rgba(0,0,0,0.15);
+	border-radius: 10px;
+	margin-bottom: 40px;
+}
+
+.alltbl > div:first-child > p {
+	display: inline-block;
+	padding-left: 15px;
+	font-size: 18px;
+	font-weight: 700;
+	width: 300px;
+	color: #6e7091;
+}
+
+.alltbl > div > div {
+	overflow-x: auto;
+}
+
+/* Table header */
+.alltbl > div > div > div:first-child {
+	background-color: #363747 !important;
+	height: 45px;
+	padding-left: 15px;
+}
+.alltbl > div > div > div:first-child > div > div {
+	display: inline-block;
+	color: #707294;
+	font-weight: 700;
+	font-size: 13.5px;
+	padding-top: 15.75px;
+}
+
+.alltbl > div > div > div:first-child > div > div:nth-child(1) {
+	width: 75px !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(2) {
+	width: 130px !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(3) {
+	width: 50px !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(4) {
+	width: 150px !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(5) {
+	width: calc(100% - 620px) !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(6) {
+	width: 125px !important;
+}
+.alltbl > div > div > div:first-child > div > div:nth-child(7) {
+	width: 60px !important;
+}
+
+/* Table body */ 
+.alltbl > div > div > div:last-child > div {
+	padding-left: 15px;
+	border-bottom: 1.5px solid #363747;
+}
+.alltbl > div > div > div:last-child > div > div > div {
+	display: inline-block;
+	font-size: 16px;
+	height: 50px;
+	padding-top: 17px;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(1) {
+	width: 75px !important;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(2) {
+	width: 130px !important;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(3) {
+	width: 50px !important;
+	color: #707294;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(4) {
+	width: 150px !important;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(5) {
+	width: calc(100% - 620px) !important;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(6) {
+	width: 125px !important;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(7) {
+	width: 60px !important;
+}
+
+/* Additional styling */
+.alltbl > div > div > div:last-child > div > div > div:nth-child(1) > a {
+	color: #3750ff;
+	border: 1px solid #3750ff;
+	text-decoration: none;
+	padding: 2px 3px 2px 3px;
+	border-radius: 5px;
+	font-size: 14px;
+	transition: 0.1s ease-in-out;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(4) > a {
+	color: #3750ff;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+	width: 90%;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(5) > a {
+	color: #3750ff;
+	text-decoration: none;
+	display: inline-block;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	vertical-align: top;
+	width: 90%;
+}
+.alltbl > div > div > div:last-child > div > div > div > span > span {
+	color: #707294;
+}
+.alltbl > div > div > div:last-child > div > div > div:nth-child(1) > a:hover {
+	color: #fefefe;
+	background-color: #3750ff;
+}
+.alltbl > div > div:last-child {
+	display: none !important;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) {
+	background-color: #363747 !important;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div {
+	color: #707294;
+	font-weight: 700;
+	float: right;
+	padding: 8px 15px 40px 0px;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div {
+	display: inline-block;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+	color: #fff;
+}
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+	padding: 7px 10px 7px 10px;
+	background-color: #434356;
+	border-radius: 5px;
+	border: none;
+	color: #6f6f90;
+	transition: 0.15s ease-in-out;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button:hover {
+	background-color: #646482;
+	color: #8c8ca6;
+}
+
+.alltbl > div:nth-child(2) > div:nth-child(2) > div > div:nth-child(2) > span:nth-child(2) > select {
+	margin-left: 10px;
+}
+
+/* TODO: Fix this styling on small displays. */
+@media screen and (max-width: 400px) {
+	.alltbl > div:nth-child(2) > div:nth-child(2) > div > div > button {
+		font-size: 11px;
+	}
+}
