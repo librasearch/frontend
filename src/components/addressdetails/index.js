@@ -9,6 +9,7 @@ import { Link } from 'preact-router/match';
 import style from './style';
 import AddressStatCard from '../statcard/addressstatcard';
 
+// TODO: Fix need for double clicking on back.
 export default class AddressDetails extends Component {
 	update() {
 		if (this.props.address === 'Minting Account') {
