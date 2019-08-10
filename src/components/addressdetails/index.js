@@ -11,8 +11,21 @@ import AddressStatCard from '../statcard/addressstatcard';
 
 export default class AddressDetails extends Component {
 	update() {
-		this.pullAddress;
-		setTimeout(this.pullAddress, 1);
+		if (this.props.address === 'Minting Account') {
+			this.setState({
+				mintingAccount: true
+			});
+			console.log('Minting');
+		}
+		else {
+			this.setState({
+				mintingAccount: false
+			});
+			this.pullAddress;
+			setTimeout(this.pullAddress, 1);
+			console.log('Not Minting');
+		}
+		console.log(this.state.mintingAccount);
 	}
 	pullAddress() {
 		axios.post('http://localhost:3000/query/', this.props.address)
@@ -48,7 +61,8 @@ export default class AddressDetails extends Component {
 		super();
 
 		this.state = {
-			postResponse: [] // Setup container for post response
+			postResponse: [], // Setup container for post response
+			mintingAccount: true
 		};
 
 		this.pullAddress = this.pullAddress.bind(this);
@@ -59,29 +73,40 @@ export default class AddressDetails extends Component {
 	}
 	render() {
 		return (
-			// TODO: Fix the fact that update() is not called on child links.
-			<div class={style.addressdetails}>
-				<div>
-					<div className="pageItem">
-						<div>
-							<p>Address Information</p>
-							<p><Link href={`/address/${this.props.address}`}>{this.props.address}</Link></p>
-						</div>
-						<div>
-							<p>Libra Balance</p>
-							<p>{this.state.postResponse.balance} <span class={style.libraText}> LIB</span></p>
-						</div>
-					</div>
-				</div>
-				<div className="pageItem">
-					<AddressStatCard
-						value1={this.state.postResponse.statIn}
-						value2={this.state.postResponse.statOut}
-						value3={this.state.postResponse.statRecent}
-						value4={this.state.postResponse.statFirst}
-					/>
-					<AddressTable address={this.props.address} updateParent={this.update} />
-				</div>
+			<div>
+				{
+					!this.state.mintingAccount
+						? (
+							<div class={style.addressdetails}>
+								<div>
+									<div className="pageItem">
+										<div>
+											<p>Address Information</p>
+											<p><Link href={`/address/${this.props.address}`}>{this.props.address}</Link></p>
+										</div>
+										<div>
+											<p>Libra Balance</p>
+											<p>{this.state.postResponse.balance} <span class={style.libraText}> LIB</span></p>
+										</div>
+									</div>
+								</div>
+								<div className="pageItem">
+									<AddressStatCard
+										value1={this.state.postResponse.statIn}
+										value2={this.state.postResponse.statOut}
+										value3={this.state.postResponse.statRecent}
+										value4={this.state.postResponse.statFirst}
+									/>
+									<AddressTable address={this.props.address} updateParent={this.update} />
+								</div>
+							</div>
+						)
+						: (
+							<div className="pageItem">
+								<p>Can't do this.</p>
+							</div>
+						)
+				}
 			</div>
 		);
 	}
