@@ -80,7 +80,7 @@ export default class AddressDetails extends Component {
 						value3={this.state.postResponse.statRecent}
 						value4={this.state.postResponse.statFirst}
 					/>
-					<AddressTable address={this.props.address} />
+					<AddressTable address={this.props.address} updateParent={this.update} />
 				</div>
 			</div>
 		);

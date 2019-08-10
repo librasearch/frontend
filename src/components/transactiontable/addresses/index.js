@@ -10,6 +10,11 @@ import style from './style';
 
 // TODO: Fix subfooter showing up???
 export default class AllTransactionTable extends Component {
+	update() {
+		this.pullLatest;
+		setTimeout(this.pullLatest, 100);
+		this.props.updateParent();
+	}
 	// Query pull function
 	pullLatest() {
 		axios.post('http://localhost:3000/query/', this.props.address)
@@ -49,16 +54,16 @@ export default class AllTransactionTable extends Component {
 		this.state = {
 			numberCount: 0,
 			latestTransactions: [], // Initializing empty latestTransactions array
-			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link> },{ Header: 'EXPIRATION TIME',accessor: 'time'},{Header: 'TYPE', accessor: 'type'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value', Cell: props => <span>{props.value} <span>LIB</span></span>},{ Header: 'TX FEE',accessor: 'gas_price', Cell: props => <span>{props.value} <span>LIB</span></span> }] // Setting up dynamic table columns
+			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link> },{ Header: 'EXPIRATION TIME',accessor: 'time'},{Header: 'TYPE', accessor: 'type'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link onClick={this.update} href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link onClick={this.update} href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value', Cell: props => <span>{props.value} <span>LIB</span></span>},{ Header: 'TX FEE',accessor: 'gas_price', Cell: props => <span>{props.value} <span>LIB</span></span> }] // Setting up dynamic table columns
 		};
 
 		this.pullLatest = this.pullLatest.bind(this); // Binding this to pullLatest()
+		this.update = this.update.bind(this);
 	}
 
 	// On mount component update.
 	componentDidMount() {
-		this.pullLatest; // First pull from '/latest'
-		setTimeout(this.pullLatest, 100);
+		this.update();
 	}
 
 	render() {
