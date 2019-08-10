@@ -7,6 +7,7 @@ import moment from 'moment';
 import axios from 'axios';
 import style from './style';
 
+// TODO: Breaks when pressing back button, fix.
 export default class VersionDetails extends Component {
 	update() {
 		this.pullVersion;

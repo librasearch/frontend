@@ -17,6 +17,7 @@ export default class AddressDetails extends Component {
 	pullAddress() {
 		axios.post('http://localhost:3000/query/', this.props.address)
 			.then(response => {
+				console.log(response.data);
 				const result = response.data; // Save response to result const to be used for modification
 
 				// Add stat identifiers
