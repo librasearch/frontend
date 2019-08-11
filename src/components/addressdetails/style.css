@@ -54,6 +54,32 @@
 	color: #707294 !important;
 }
 
+.wip {
+	background-color: #f2dede;
+	color: #a94442;
+	border: 1px solid #ebcccc;
+	border-radius: 5px;
+	margin: 25px 0px 25px 0px;
+	padding-left: 15px;
+}
+
+.wip > p {
+	line-height: 25px;
+}
+
+.wip > p > a {
+	color: #a94442;
+	padding-bottom: 1px;
+	text-decoration: none;
+	border-bottom: 2px dashed rgb(230, 169, 169);
+	transition: 0.1s ease-in-out;
+}
+
+.wip > p > a:hover {
+	padding-bottom: 0px;
+}
+
+
 @media screen and (max-width: 900px) { 
 	.addressdetails > div:first-child {
 		padding: 15px 0px 15px 0px;

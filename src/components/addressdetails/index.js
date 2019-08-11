@@ -103,8 +103,13 @@ export default class AddressDetails extends Component {
 							</div>
 						)
 						: (
+							// TODO: Add performant indexing for Mining Account.
 							<div className="pageItem">
-								<p>Can't do this.</p>
+								<div class={style.wip}>
+									<h3>Account not indexed</h3>
+									<p>Since the {this.props.address} is responsible for a majority of testnet outgoing transactions, it is currently not indexed (for performance issues). We are looking to change this upon full launch. We apologize for the inconvenience.</p>
+									<p><Link href="/">Return Home</Link></p>
+								</div>
 							</div>
 						)
 				}

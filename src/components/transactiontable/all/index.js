@@ -46,7 +46,7 @@ export default class AllTransactionTable extends Component {
 		super();
 
 		this.state = {
-			latestVersion: 0,
+			latestVersion: 'Loading',
 			latestTransactions: [], // Initializing empty latestTransactions array
 			tableColumns: [{ Header: 'TX ID',accessor: '_id', Cell: props => <Link href={`/version/${props.value}`}>{props.value}</Link> },{ Header: 'EXPIRATION TIME',accessor: 'time'},{Header: 'TYPE', accessor: 'type'},{ Header: 'FROM',accessor: 'from', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'TO',accessor: 'to', Cell: props => <Link href={`/address/${props.value}`}>{props.value}</Link>},{ Header: 'AMOUNT',accessor: 'value', Cell: props => <span>{props.value} <span>LIB</span></span>},{ Header: 'TX FEE',accessor: 'gas_price', Cell: props => <span>{props.value} <span>LIB</span></span> }] // Setting up dynamic table columns
 		};
@@ -74,7 +74,6 @@ export default class AllTransactionTable extends Component {
 						data={this.state.latestTransactions}
 						columns={this.state.tableColumns}
 						defaultPageSize={25}
-						showPagination={true}
 						showPageJump={false}
 					/>
 				</div>
